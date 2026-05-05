@@ -3,11 +3,13 @@ type NavigationItem = {
   href: string;
 };
 
+const defaultSiteUrl = "https://ari-franklin.github.io/Franklin-Reed";
+
 export const siteContent = {
   name: "IGB",
   founderName: "Franklin Reed",
   contactEmail: "info@franklinreed.com",
-  siteUrl: "https://igb.example",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? defaultSiteUrl,
   locale: "en_US",
   description:
     "A modern editorial landing page for IGB, built around the teaser reveal and a refined launch aesthetic.",

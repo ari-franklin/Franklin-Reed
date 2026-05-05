@@ -23,7 +23,7 @@ describe("site content", () => {
     expect(metadata.title).toBe("About | IGB");
     expect(metadata.description).toBe("Learn more about IGB.");
     expect(metadata.alternates).toMatchObject({
-      canonical: "https://igb.example/about",
+      canonical: `${siteContent.siteUrl}/about`,
     });
 
     const openGraph = metadata.openGraph as Metadata["openGraph"];

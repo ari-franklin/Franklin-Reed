@@ -3,6 +3,8 @@ import type { MetadataRoute } from "next";
 import { siteContent } from "@/content/site";
 import { resolveCanonicalUrl } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 const currentDate = new Date();
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
