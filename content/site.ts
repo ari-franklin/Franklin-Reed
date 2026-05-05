@@ -1,14 +1,17 @@
+type NavigationItem = {
+  label: string;
+  href: string;
+};
+
 export const siteContent = {
   name: "IGB",
   founderName: "Franklin Reed",
+  contactEmail: "info@franklinreed.com",
   siteUrl: "https://igb.example",
   locale: "en_US",
   description:
     "A modern editorial landing page for IGB, built around the teaser reveal and a refined launch aesthetic.",
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-  ],
+  navigation: [] as NavigationItem[],
   teaser: {
     src: "/images/ig-teaser.png",
     alt: "Face It teaser artwork announcing that something handsome is coming.",

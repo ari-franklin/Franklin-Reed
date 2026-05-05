@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Footer } from "@/components/footer";
 import { siteContent } from "@/content/site";
 import {
   createOrganizationStructuredData,
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="site-shell">
         {children}
+        <Footer />
         <script
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),

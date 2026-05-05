@@ -11,8 +11,8 @@
   --font-serif:
     "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --font-sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  --space-page-x: clamp(1.5rem, 3vw, 3rem);
-  --space-page-y: clamp(2rem, 6vw, 5rem);
+  --space-page-x: clamp(1rem, 3vw, 2.5rem);
+  --space-page-y: clamp(1rem, 3vw, 2.5rem);
   --max-content-width: 72rem;
 }
 
@@ -35,12 +35,16 @@ body {
 
 .site-shell {
   min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 main {
   box-sizing: border-box;
   width: min(100%, var(--max-content-width));
   margin: 0 auto;
+  align-self: stretch;
   padding: var(--space-page-y) var(--space-page-x);
 }
 
@@ -70,8 +74,10 @@ ul {
 }
 
 .landing-page {
+  min-height: 100%;
   display: grid;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
+  grid-template-rows: auto 1fr;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
 }
 
 .site-header {
@@ -97,17 +103,18 @@ ul {
 }
 
 .hero-section {
-  min-height: calc(100vh - (var(--space-page-y) * 2));
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-block: clamp(0.5rem, 2vw, 1.25rem);
 }
 
 .hero-section__copy {
   display: grid;
   justify-items: center;
-  gap: 2rem;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
   width: min(100%, 64rem);
 }
 
@@ -122,7 +129,7 @@ ul {
 
 .hero-section h1 {
   max-width: 14ch;
-  font-size: clamp(3.4rem, 8vw, 6.8rem);
+  font-size: clamp(2.65rem, 8vw, 6.25rem);
   line-height: 0.95;
   text-wrap: balance;
 }
@@ -186,7 +193,8 @@ ul {
 
 .about-page {
   display: grid;
-  gap: clamp(2.5rem, 6vw, 4.5rem);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-content: start;
 }
 
 .about-page__hero {
@@ -213,12 +221,30 @@ ul {
 
 .site-footer {
   display: grid;
-  gap: 1rem;
-  padding-top: 1rem;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem 1rem;
+  box-sizing: border-box;
+  width: min(100%, var(--max-content-width));
+  margin: 0 auto;
+  padding: 0 var(--space-page-x) clamp(0.9rem, 2.4vw, 1.5rem);
   border-top: 1px solid var(--color-line);
 }
 
+.site-footer__copy {
+  font-size: 0.95rem;
+}
+
+.site-footer__contact {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  font-style: italic;
+  justify-self: end;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
 .site-footer__nav {
+  grid-column: 1 / -1;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -227,11 +253,27 @@ ul {
 
 @media (max-width: 640px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-section {
     min-height: auto;
+  }
+
+  .hero-section h1 {
+    max-width: 10ch;
+  }
+
+  .about-page__hero {
+    gap: 1rem;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__contact {
+    justify-self: start;
   }
 }

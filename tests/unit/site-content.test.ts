@@ -10,9 +10,7 @@ describe("site content", () => {
     expect(siteContent.hero.headlineTailTop).toBe("Something Handsome");
     expect(siteContent.hero.headlineTailBottom).toBe("Is Coming.");
     expect(siteContent.teaser.alt).toContain("Face It");
-    expect(siteContent.navigation.some((item) => item.href === "/about")).toBe(
-      true,
-    );
+    expect(siteContent.navigation).toHaveLength(0);
   });
 
   it("builds page metadata from shared defaults", () => {
