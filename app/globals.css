@@ -261,8 +261,13 @@ ul {
     min-height: auto;
   }
 
+  .hero-section__copy {
+    width: 100%;
+  }
+
   .hero-section h1 {
     max-width: 10ch;
+    margin-inline: auto;
   }
 
   .about-page__hero {
@@ -270,10 +275,12 @@ ul {
   }
 
   .site-footer {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
   }
 
   .site-footer__contact {
-    justify-self: start;
+    justify-self: end;
+    text-align: right;
   }
 }
