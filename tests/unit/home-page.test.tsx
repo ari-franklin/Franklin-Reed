@@ -6,11 +6,15 @@ describe("home page", () => {
   it("renders the centered landing hero without the teaser image", () => {
     render(<HomePage />);
 
+    const heading = screen.getByRole("heading", { level: 1 });
+
     expect(screen.getByRole("link", { name: "Franklin Reed" })).toHaveAttribute(
       "href",
       "/",
     );
-    expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
+    expect(heading).toBeInTheDocument();
+    expect(heading.closest(".hero-section")).toBeInTheDocument();
+    expect(heading.parentElement).toHaveClass("hero-section__copy");
     expect(screen.getByText("Face It:")).toBeInTheDocument();
     expect(screen.getByText("Something Handsome")).toBeInTheDocument();
     expect(screen.getByText("Is Coming.")).toBeInTheDocument();

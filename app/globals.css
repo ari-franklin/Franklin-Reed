@@ -128,7 +128,9 @@ ul {
 }
 
 .hero-section h1 {
+  width: min(100%, 14ch);
   max-width: 14ch;
+  margin-inline: auto;
   font-size: clamp(2.65rem, 8vw, 6.25rem);
   line-height: 0.95;
   text-wrap: balance;
@@ -141,7 +143,7 @@ ul {
 
 .hero-section__headline-tail {
   margin-top: 0.2em;
-  width: min-content;
+  width: 100%;
   margin-inline: auto;
   font-size: 0.72em;
   letter-spacing: -0.02em;
@@ -150,7 +152,7 @@ ul {
 
 .hero-section__headline-tail-line {
   display: block;
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
 .brand-promise__body,
@@ -266,8 +268,8 @@ ul {
   }
 
   .hero-section h1 {
+    width: 100%;
     max-width: 10ch;
-    margin-inline: auto;
   }
 
   .about-page__hero {
