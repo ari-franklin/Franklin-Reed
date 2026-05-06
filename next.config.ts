@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
-const isGithubPages =
-  process.env.GITHUB_ACTIONS === "true" ||
-  process.env.GITHUB_PAGES === "true";
-const repoName = "Franklin-Reed";
-const basePath = isGithubPages ? `/${repoName}` : "";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.franklinreed.com";
+const sitePathname = new URL(siteUrl).pathname.replace(/\/$/, "");
+const basePath = sitePathname === "/" ? "" : sitePathname;
 
 const nextConfig: NextConfig = {
   output: "export",

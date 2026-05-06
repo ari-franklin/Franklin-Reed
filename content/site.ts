@@ -3,7 +3,7 @@ type NavigationItem = {
   href: string;
 };
 
-const defaultSiteUrl = "https://ari-franklin.github.io/Franklin-Reed";
+const defaultSiteUrl = "https://www.franklinreed.com";
 
 export const siteContent = {
   name: "IGB",
