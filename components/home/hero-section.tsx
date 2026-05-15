@@ -8,6 +8,7 @@ export function HeroSection() {
           <span className="hero-section__headline-lead">
             {siteContent.hero.headlineLead}
           </span>
+          <span aria-hidden="true" className="hero-section__paint-stripe" />
           <span className="hero-section__headline-tail">
             <span className="hero-section__headline-tail-line">
               {siteContent.hero.headlineTailTop}
