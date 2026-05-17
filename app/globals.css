@@ -161,8 +161,8 @@ ul {
 }
 
 .hero-section h1 {
-  width: min(100%, 14ch);
-  max-width: 14ch;
+  width: min(100%, 11.5ch);
+  max-width: 11.5ch;
   margin-inline: auto;
   font-size: clamp(2.65rem, 8vw, 6.25rem);
   line-height: 0.95;
@@ -184,22 +184,25 @@ ul {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 1.08em;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
   filter: drop-shadow(0 0 18px rgba(50, 149, 255, 0.12));
 }
 
 .hero-section__paint-stripe {
   display: block;
   position: relative;
-  width: min(100%, 5ch);
-  height: clamp(0.8rem, 0.72vw, 0.52rem);
-  margin: clamp(0.4rem, 1vw, 0.55rem) auto clamp(0.78rem, 1.7vw, 1rem);
-  border-radius: 999px;
+  width: min(100%, 4.95ch);
+  height: clamp(1.05rem, 1vw, 1.28rem);
+  margin: clamp(0.22rem, 0.7vw, 0.36rem) auto clamp(0.54rem, 1.3vw, 0.78rem);
   background:
-    linear-gradient(180deg, rgba(98, 203, 255, 0.98), rgba(7, 136, 233, 0.96)),
-    linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.28) 48%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 0 0 18px rgba(32, 150, 255, 0.25);
-  transform: rotate(-1.4deg);
-  clip-path: polygon(1% 71%, 6% 54%, 13% 43%, 24% 35%, 38% 30%, 51% 28%, 64% 30%, 77% 37%, 88% 46%, 95% 58%, 99% 71%, 97% 84%, 88% 93%, 75% 98%, 57% 100%, 38% 97%, 22% 91%, 9% 82%);
+    linear-gradient(180deg, rgba(165, 230, 255, 0.96) 0%, rgba(58, 181, 255, 0.98) 34%, rgba(16, 141, 238, 0.98) 66%, rgba(4, 108, 208, 0.92) 100%);
+  box-shadow:
+    0 0 12px rgba(32, 150, 255, 0.16),
+    0 1px 0 rgba(196, 240, 255, 0.2) inset;
+  transform: rotate(-1deg);
+  clip-path: polygon(0% 78%, 4% 66%, 11% 56%, 20% 48%, 31% 41%, 45% 36%, 58% 35%, 70% 37%, 81% 42%, 90% 49%, 97% 58%, 100% 64%, 98% 74%, 90% 78%, 79% 79%, 66% 78%, 52% 78%, 39% 81%, 25% 86%, 13% 92%, 5% 95%);
 }
 
 .hero-section__paint-stripe::before,
@@ -207,28 +210,46 @@ ul {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 9px;
   pointer-events: none;
 }
 
 .hero-section__paint-stripe::before {
   background:
-    radial-gradient(circle at 8% 56%, rgba(112, 211, 255, 0.92) 0 22%, rgba(112, 211, 255, 0) 30%),
-    radial-gradient(circle at 92% 58%, rgba(112, 211, 255, 0.9) 0 20%, rgba(112, 211, 255, 0) 30%);
-  opacity: 0.9;
+    linear-gradient(180deg, rgba(214, 245, 255, 0.82), rgba(214, 245, 255, 0.28) 42%, rgba(214, 245, 255, 0) 68%),
+    repeating-linear-gradient(
+      95deg,
+      rgba(0, 0, 0, 0) 0 7%,
+      rgba(4, 29, 58, 0.16) 7.5% 9.5%,
+      rgba(0, 0, 0, 0) 10% 15%,
+      rgba(2, 19, 42, 0.08) 15.5% 17%,
+      rgba(0, 0, 0, 0) 17.5% 23%
+    );
+  mix-blend-mode: screen;
+  clip-path: polygon(2% 44%, 13% 34%, 28% 28%, 45% 25%, 62% 26%, 78% 31%, 91% 39%, 98% 48%, 95% 55%, 82% 50%, 64% 46%, 44% 46%, 24% 51%, 8% 60%);
+  opacity: 0.88;
 }
 
 .hero-section__paint-stripe::after {
-  display: none;
+  inset: -10% -4% -18%;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(10, 95, 177, 0.56) 10%, rgba(0, 0, 0, 0) 18%, rgba(7, 84, 154, 0.34) 30%, rgba(0, 0, 0, 0) 38%, rgba(0, 0, 0, 0) 74%, rgba(5, 108, 197, 0.38) 86%, rgba(0, 0, 0, 0) 100%),
+    repeating-linear-gradient(
+      92deg,
+      rgba(0, 0, 0, 0) 0 8%,
+      rgba(4, 39, 73, 0.24) 8.5% 10.5%,
+      rgba(0, 0, 0, 0) 11% 18%
+    );
+  clip-path: polygon(0% 73%, 6% 66%, 13% 66%, 24% 68%, 38% 70%, 53% 71%, 69% 69%, 82% 65%, 92% 60%, 100% 58%, 96% 71%, 84% 79%, 67% 86%, 49% 91%, 29% 92%, 13% 88%, 3% 82%);
+  opacity: 0.88;
 }
 
 .hero-section__headline-tail {
-  margin-top: 0.2em;
+  margin-top: 0.06em;
   width: 100%;
   margin-inline: auto;
   font-size: 0.72em;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
   color: #e7eff9;
   text-shadow:
     0 0 1px rgba(255, 255, 255, 0.36),
@@ -354,7 +375,7 @@ ul {
 
   .hero-section h1 {
     width: 100%;
-    max-width: 10ch;
+    max-width: 9.75ch;
   }
 
   .about-page__hero {

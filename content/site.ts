@@ -21,8 +21,8 @@ export const siteContent = {
   socialImage: "/images/ig-teaser.png",
   hero: {
     headlineLead: "Face It:",
-    headlineTailTop: "Something Handsome",
-    headlineTailBottom: "Is Coming.",
+    headlineTailTop: "Confidence",
+    headlineTailBottom: "Starts Here.",
     primaryLink: {
       label: "About the reveal",
       href: "/about",

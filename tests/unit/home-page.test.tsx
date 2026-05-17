@@ -16,8 +16,10 @@ describe("home page", () => {
     expect(heading.closest(".hero-section")).toBeInTheDocument();
     expect(heading.parentElement).toHaveClass("hero-section__copy");
     expect(screen.getByText("Face It:")).toBeInTheDocument();
-    expect(screen.getByText("Something Handsome")).toBeInTheDocument();
-    expect(screen.getByText("Is Coming.")).toBeInTheDocument();
+    expect(screen.getByText("Confidence")).toBeInTheDocument();
+    expect(screen.getByText("Starts Here.")).toBeInTheDocument();
+    expect(screen.queryByText("Something Handsome")).not.toBeInTheDocument();
+    expect(screen.queryByText("Is Coming.")).not.toBeInTheDocument();
     expect(screen.queryByRole("img")).not.toBeInTheDocument();
     expect(
       screen.queryByRole("link", { name: /about the reveal/i }),

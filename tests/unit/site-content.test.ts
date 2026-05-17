@@ -7,8 +7,8 @@ describe("site content", () => {
   it("defines the core brand and teaser copy", () => {
     expect(siteContent.name).toBe("IGB");
     expect(siteContent.hero.headlineLead).toBe("Face It:");
-    expect(siteContent.hero.headlineTailTop).toBe("Something Handsome");
-    expect(siteContent.hero.headlineTailBottom).toBe("Is Coming.");
+    expect(siteContent.hero.headlineTailTop).toBe("Confidence");
+    expect(siteContent.hero.headlineTailBottom).toBe("Starts Here.");
     expect(siteContent.teaser.alt).toContain("Face It");
     expect(siteContent.navigation).toHaveLength(0);
   });
