@@ -385,10 +385,35 @@ ul {
   .site-footer {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
+    gap: 0.5rem;
+  }
+
+  .site-footer__copy,
+  .site-footer__contact {
+    font-size: clamp(0.75rem, 3.2vw, 0.85rem);
+    white-space: nowrap;
   }
 
   .site-footer__contact {
     justify-self: end;
     text-align: right;
+  }
+}
+
+@media (max-width: 359px) {
+  .site-footer {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 0.25rem;
+  }
+
+  .site-footer__copy {
+    grid-row: 2;
+  }
+
+  .site-footer__contact {
+    grid-row: 1;
+    justify-self: center;
+    text-align: center;
   }
 }
