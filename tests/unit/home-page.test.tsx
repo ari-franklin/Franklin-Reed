@@ -2,7 +2,20 @@ import { render, screen } from "@testing-library/react";
 
 import HomePage from "@/app/page";
 
+vi.mock("@/components/signup/signup-modal", () => ({
+  SignupModal: () => <div data-testid="signup-modal" />,
+}));
+
 describe("home page", () => {
+  it("includes the signup modal in production", () => {
+    vi.stubEnv("NODE_ENV", "production");
+    try {
+      render(<HomePage />);
+      expect(screen.getByTestId("signup-modal")).toBeInTheDocument();
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  });
   it("renders the centered landing hero without the teaser image", () => {
     render(<HomePage />);
 

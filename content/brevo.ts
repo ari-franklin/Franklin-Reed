@@ -1,0 +1,2 @@
+export const brevoFormUrl =
+  "https://7ed29092.sibforms.com/serve/MUIFAHOj6BykYjqtj5BZ9KwDXWp_tO8Ajv7aLbDVNrhDJp4neBF9ZYUyuCgPkADJFCzh3EpCbDDgjfaQTTwyHZExP_oAhkxbQlgJs6j6MVnNbD9dee8OjrxZC6MgCdqs6bYBNpTqAdAaVYYYnsgp_QvBUjKQhL_yGl67sZezQ6nVpEriPV128H3pfScpPWcMtTKa1PcVKSoBS0wQXw==";
